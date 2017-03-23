@@ -1,0 +1,98 @@
+<ion-view title="BMI" id="page13"  ng-controller="bMICtrl">
+  <ion-nav-buttons side="right">
+    <button class="button button-icon ion-trash-a" ng-click="openDelete()">
+    </button>
+    <button class="button button-icon ion-plus-circled" ng-click="openModal()">
+    </button>
+  </ion-nav-buttons>
+  <ion-content padding="true" class="has-header">
+    <h4 id="bMI-heading20" style="color:#000000; text-align: center;">Graphical representation of BMI</h4>
+    <div>
+      <div class="text-center" id="line" style="height: 300px;padding-right: 20px;">
+
+      </div>
+
+    </div>
+    <div class="spacer" style="width: 300px; height: 31px;"></div>
+    <h4 id="bMI-heading19" style="color:#000000;">Stored BMI</h4>
+    <div class="item item-input">
+      <i class="icon ion-search placeholder-icon"></i>
+      <input type="search" autocorrect="off" placeholder="filter data" ng-model="search">
+      <button ng-click="clearSearch()" class="button button-icon ion-android-close input-button" ng-show="search.length">
+      </button>
+    </div>
+
+    <ion-list id="results-list6">
+        <ion-item class="item-icon-right item-text-wrap" id="results-list-item8" ng-repeat="item in items | filter:search" ng-click="getSelBMI($index)">
+          <button ng-click="deleteOne(item)">Delete</button>
+          {{item.date}}
+          <span class="item-note">{{item.bmi}}</span>
+          <i class="icon ion-chevron-right icon-accessory"></i>
+        </ion-item>
+    </ion-list>
+  </ion-content>
+  <script id="modal.html" type="text/ng-template">
+    <ion-modal-view class="ion-nifty-modal">
+      <ion-header-bar class="bar bar-header bar-assertive">
+        <h1 class="title">New Weight</h1>
+        <button class="button button-clear button-primary ion-close-circled" ng-click="closeModal()"></button>
+      </ion-header-bar>
+
+      <div class="ion-modal-content-custom">
+        <ion-content class="padding">
+          <div class="list">
+            <div class="item item-input item-select">
+              <input ng-model="newbmi.weight" type="number" placeholder="Weight">
+              <select class="ion-input-select--large">
+                <option selected>kg</option>
+                <option >lb</option>
+              </select>
+            </div>
+            <p style="color: red;">{{error}}</p>
+            <button class="button button-full button-assertive " ng-click="insertBMI(newbmi)">Insert Weight</button>
+          </div>
+        </ion-content>
+      </div>
+    </ion-modal-view>
+  </script>
+  <script id="delete.html" type="text/ng-template">
+    <ion-modal-view class="ion-nifty-modal">
+      <ion-header-bar class="bar bar-header bar-assertive">
+        <h1 class="title">Would you like to delete all data?</h1>
+        <button class="button button-clear button-primary ion-close-circled" ng-click="closeModal()"></button>
+      </ion-header-bar>
+
+      <div class="ion-modal-content-custom">
+        <ion-content class="padding">
+          <div class="list">
+            <button class="button button-full button-assertive col-md-6" ng-click="closeModal()">No</button>
+            <button class="button button-full button-balanced col-md-6" ng-click="deleteAllBMI()">Yes</button>
+          </div>
+        </ion-content>
+      </div>
+    </ion-modal-view>
+  </script>
+
+  <script id="heightmodal.html" type="text/ng-template">
+    <ion-modal-view class="ion-nifty-modal">
+      <ion-header-bar class="bar bar-header bar-assertive">
+        <h1 class="title">New Height</h1>
+        <button class="button button-clear button-primary ion-close-circled" ng-click="closeModal()"></button>
+      </ion-header-bar>
+
+      <div class="ion-modal-content-custom">
+        <ion-content class="padding">
+          <div class="list">
+            <div class="item item-input">
+              <input ng-model="newbmi.height" type="number" name="height" placeholder="Height" required>
+              <span class="input-label">cm</span>
+            </div>
+            <p style="color: red;">{{error}}</p>
+            <button class="button button-full button-assertive " ng-click="insertHeight(newbmi)">Insert Height</button>
+          </div>
+        </ion-content>
+      </div>
+    </ion-modal-view>
+  </script>
+</ion-view>
+

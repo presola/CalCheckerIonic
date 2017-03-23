@@ -1,0 +1,31 @@
+<ion-view title="Selected Recipe" id="page19">
+<ion-nav-bar class="bar-assertive">
+        <ion-nav-back-button></ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-content padding="true" class="has-header" ng-controller="selectedRecipeCtrl">
+        <ion-list id="selectedRecipe-list22">
+        <ion-item class="item-thumbnail-left item-icon-right item-text-wrap" id="results2-list-item19">
+                <img ng-src="{{image}}">
+                <h2><b>{{getName}}</b></h2>
+                <h4>{{getDescription}}</h4>
+            </ion-item>
+            <ion-item id="selectedRecipe-list-item48">Cooking time
+                <span class="item-note">{{time}} mins</span>
+            </ion-item>
+            <ion-item id="selectedRecipe-list-item49">No of servings
+                <span class="item-note">{{servings}}</span>
+            </ion-item>
+            <ion-item id="selectedRecipe-list-item50">Calories
+                <span class="item-note">{{cal}}kcal per {{size}}</span>
+            </ion-item>
+        </ion-list>
+        <h4 id="selectedRecipe-heading26" style="color:#020202;">Ingredients</h4>
+        <ion-list id="selectedRecipe-list24">
+            <ion-item class="item-text-wrap" id="selectedRecipe-list-item51" ng-repeat="item in ingredients">{{item.ingredient_description}}</ion-item>
+        </ion-list>
+        <h4 id="selectedRecipe-heading27" style="color:#020202;">Instructions</h4>
+        <ion-list id="selectedRecipe-list25">
+            <ion-item id="selectedRecipe-list-item52" class="item-text-wrap" ng-repeat="item in directions">{{item.direction_number}}. {{item.direction_description}}</ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

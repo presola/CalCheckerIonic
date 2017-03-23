@@ -1,0 +1,30 @@
+{
+  "name": "node-js-calorie",
+  "description": "A simple Calorie Checker application",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express" : "*",
+    "body-parser" : "*",
+    "request" : "*",
+    "crypto" : "*",
+    "restler" : "*", 
+    "xml2json": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Abiwax/CalorieCheckerIOSSwift3"
+  },
+  "keywords": [
+    "node",
+    "swift",
+    "ios",
+    "express",
+    "fatsecret",
+    "swift 3"
+  ],
+  "author": "Abisola Adeniran",
+  "license": "MIT"
+}

@@ -1,0 +1,27 @@
+<ion-view title="BMI Result" id="page17" ng-controller="bMIResultCtrl">
+    <ion-nav-bar class="bar-assertive">
+      <ion-nav-back-button></ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-content padding="true">
+        <div>
+          <div class="col">
+            <div name="meter" id="meter" style="height:450px;margin:0 auto"></div>
+          </div>
+        </div>
+      <div class="spacer" style="width: 300px; height: 30px;"></div>
+        <ion-list id="bMIResult-list13">
+            <ion-item id="bMIResult-list-item32">Weight
+                <span class="item-note">{{weight}}</span>
+            </ion-item>
+            <ion-item id="bMIResult-list-item33">Height
+                <span class="item-note">{{height}}</span>
+            </ion-item>
+            <ion-item id="bMIResult-list-item34">BMI
+                <span class="item-note">{{bmi}}</span>
+            </ion-item>
+            <ion-item id="bMIResult-list-item35">Date
+                <span class="item-note">{{date}}</span>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

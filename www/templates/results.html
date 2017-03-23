@@ -1,0 +1,19 @@
+<ion-view title="Results" id="page14">
+<ion-nav-bar class="bar-assertive">
+        <ion-nav-back-button></ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-content padding="true" class="has-header" ng-controller="resultsCtrl">
+        <div style="padding:7px; font-weight:bold; font-size:20px;border: 2px solid #eee;background-color:#eee;">{{searchName | titleCase}}</div>
+        <div class="item item-input">
+          <i class="icon ion-search placeholder-icon"></i>
+          <input type="search" autocorrect="off" placeholder="filter food" ng-model="search" ng-focus="searchFocused = true">
+          <button ng-click="clearSearch()" class="button button-icon ion-android-close input-button" ng-show="search.length">
+          </button>
+        </div>
+        <ion-list id="results-list6">
+            <ion-item class="item-icon-right item-text-wrap" id="results-list-item8" ng-repeat="item in items | filter:search" ng-click="getSelFood($index)">{{item.food_name}}
+                <i class="icon ion-chevron-right icon-accessory"></i>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

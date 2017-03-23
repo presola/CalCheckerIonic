@@ -1,0 +1,13 @@
+<ion-view title="Search" id="page8">
+    <ion-content padding="true" class="has-header" ng-controller="searchCtrl">
+        <div class="spacer" style="height: 100px;"></div>
+
+        <form id="search-form8" class="list" name="textForm" novalidate>
+            <label class="item item-input" id="search-input9">
+                <input type="text" name="getText" ng-model="getText" placeholder="food search" required>
+            </label>
+            <p style="color: red;">{{error}}</p>
+        <button ng-click="getFood()"  id="search-button6" class="button button-assertive  button-block">Search by text</button>
+        </form>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,36 @@
+<ion-view title="Results" id="page15">
+<ion-nav-bar class="bar-assertive">
+        <ion-nav-back-button></ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-content padding="true" class="has-header" ng-controller="results2Ctrl">
+        <h3 id="results2-heading4" style="color:#000000;">{{getName}}</h3>
+        <h4 id="results2-heading5" style="color:#020202;">Info</h4>
+        <div>
+            <section id="info">
+                <ion-list id="selectedRecipe-list22">
+            <ion-item id="selectedRecipe-list-item48">Calories
+                <span class="item-note">{{cal}}</span>
+            </ion-item>
+            <ion-item id="selectedRecipe-list-item49">Grams
+                <span class="item-note">{{gram}}</span>
+            </ion-item>
+        </ion-list>
+            </section>
+        </div>
+        <h4 id="results2-heading6" style="color:#000000;">Recipes</h4>
+      <div class="item item-input">
+          <i class="icon ion-search placeholder-icon"></i>
+          <input type="search" autocorrect="off" placeholder="filter recipes" ng-model="search">
+          <button ng-click="clearSearch()" class="button button-icon ion-android-close input-button" ng-show="search.length">
+          </button>
+      </div>
+        <ion-list id="results2-list9">
+            <ion-item class="item-thumbnail-left item-icon-right item-text-wrap" id="results2-list-item19" ng-repeat="item in items | filter:search" ng-click="getSelRecipe($index)">
+                <img ng-src="{{item.recipe_image}}">
+                <h2>{{item.recipe_name}}</h2>
+                <h4>{{item.recipe_description}}</h4>
+                <i class="icon ion-chevron-right icon-accessory"></i>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,58 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/Cellar/node/7.7.4/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'NodeJS/' ]
+2 info using npm@4.1.2
+3 info using node@v7.7.4
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData NodeJS/
+8 silly fetchDirectoryPackageData NodeJS/
+9 silly install normalizeTree
+10 silly loadCurrentTree Finishing
+11 silly loadIdealTree Starting
+12 silly install loadIdealTree
+13 silly cloneCurrentTree Starting
+14 silly install cloneCurrentTreeToIdealTree
+15 silly cloneCurrentTree Finishing
+16 silly loadShrinkwrap Starting
+17 silly install loadShrinkwrap
+18 silly loadShrinkwrap Finishing
+19 silly loadAllDepsIntoIdealTree Starting
+20 silly install loadAllDepsIntoIdealTree
+21 silly resolveWithNewModule node-js-calorie@ checking installable status
+22 silly cache add args [ 'NodeJS/', null ]
+23 verbose cache add spec NodeJS/
+24 silly cache add parsed spec Result {
+24 silly cache add   raw: 'NodeJS/',
+24 silly cache add   scope: null,
+24 silly cache add   escapedName: null,
+24 silly cache add   name: null,
+24 silly cache add   rawSpec: 'NodeJS/',
+24 silly cache add   spec: '/Users/abiwax/Downloads/CalChecker 2/CalChecker/NodeJS',
+24 silly cache add   type: 'directory' }
+25 error addLocal Could not install /Users/abiwax/Downloads/CalChecker 2/CalChecker/NodeJS
+26 silly rollbackFailedOptional Starting
+27 silly rollbackFailedOptional Finishing
+28 silly runTopLevelLifecycles Finishing
+29 silly install printInstalled
+30 verbose stack Error: No version provided in package.json
+30 verbose stack     at /usr/local/lib/node_modules/npm/lib/cache/add-local.js:75:17
+30 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:356:5
+30 verbose stack     at checkBinReferences_ (/usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:320:45)
+30 verbose stack     at final (/usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:354:3)
+30 verbose stack     at then (/usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:124:5)
+30 verbose stack     at ReadFileContext.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:295:20)
+30 verbose stack     at ReadFileContext.callback (/usr/local/lib/node_modules/npm/node_modules/graceful-fs/graceful-fs.js:78:16)
+30 verbose stack     at FSReqWrap.readFileAfterOpen [as oncomplete] (fs.js:359:13)
+31 verbose cwd /Users/abiwax/Downloads/CalChecker 2/CalChecker
+32 error Darwin 16.4.0
+33 error argv "/usr/local/Cellar/node/7.7.4/bin/node" "/usr/local/bin/npm" "install" "NodeJS/"
+34 error node v7.7.4
+35 error npm  v4.1.2
+36 error No version provided in package.json
+37 error If you need help, you may report this error at:
+37 error     <https://github.com/npm/npm/issues>
+38 verbose exit [ 1, true ]
